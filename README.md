@@ -8,6 +8,7 @@ http://mobilator.peteburgers.tk is routed to the mobilator app.
 ### Apps
 
  * [camlib](https://github.com/sneakypete81/camlib)
+ * [mobilator](https://github.com/sneakypete81/mobilator)
 
 ### Configuration
 
@@ -37,6 +38,8 @@ First pull in the latest versions of all submodules:
 ```
 # From the root repository:
 git submodule update --remote
+# or:
+git submodule update --remote --merge
 ```
 
 Make sure the URL of each submodule is changed use SSH rather than HTTPS:
@@ -82,3 +85,7 @@ The hourly cron job needs to know where to find the scraper:
 ```
 rhc env set CAMLIB_SCRAPER_REL_DIR=apps/camlib/tasks -a multi
 ```
+
+### Mobilator
+
+Converts links inside RSS/Atom feeds to point to a mobile-friendly version of the target site.
