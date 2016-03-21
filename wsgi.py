@@ -17,7 +17,7 @@ except IOError:
 from werkzeug.exceptions import NotFound
 from subdomain_dispatcher import SubdomainDispatcher
 from test1.test1 import app as test1_app
-from test2.test1 import app as test2_app
+from test2.test2 import app as test2_app
 
 SUBDOMAIN_MAP = {
     "test1": test1_app,
