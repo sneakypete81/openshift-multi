@@ -23,7 +23,7 @@ from apps.camlib.camlib import app as camlib_app
 SUBDOMAIN_MAP = {
     "test1": test1_app,
     "test2": test2_app,
-    "camblib": camlib_app,
+    "camlib": camlib_app,
 }
 
 def make_app(subdomain):
