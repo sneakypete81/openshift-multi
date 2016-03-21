@@ -1,21 +1,35 @@
-Openshift Multi-App Environment
+OpenShift Multi-App Environment
 ===============================
 
-This is an Openshift Python WSGI application containing a number of apps.
+This is an OpenShift Python WSGI application containing a number of apps.
 Requests are routed to each app based on the subdomain. For example:
 mobilator.peteburgers.tk is routed to the mobilator app.
 
-###Apps
+### Apps
+
  * [camlib](https://github.com/sneakypete81/camlib)
 
-###Configuration
+### Configuration
 
 The subdomain router needs to know the domain root:
 ```
 rhc env set DOMAIN_ROOT=peteburgers.tk -a multi
 ```
 
-###Submodules
+### Dependencies
+
+The master list of Python dependencies is in `requirements.txt`. This needs to be
+manually updated as each app's dependencies change.
+
+The initial OpenShift virtualenv setup takes a long time, and git push hangs up
+before it completes. You'll need to ssh in and run the setup process manually:
+```
+ssh xxxxxx@multi-sneakypete81.rhcloud.com
+pip install -r app-root/repo/requirements.txt
+```
+
+### Submodules
+
 Each app is pulled in as a git submodule. Submodules are a bit tricky, so here's
 an example workflow:
 
@@ -47,10 +61,11 @@ git push --recurse-submodules=on-demand
 
 CamLib
 ------
+
 Scrapings from Cambridgeshire Library eBooks with ratings from GoodReads.
 https://github.com/sneakypete81/camlib
 
-###Configuration
+### Configuration
 
 The hourly cron job needs to know where to find the scraper:
 ```
