@@ -1,0 +1,3 @@
+[submodule "apps/camlib"]
+	path = apps/camlib
+	url = https://github.com/sneakypete81/camlib.git
