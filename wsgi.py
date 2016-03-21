@@ -16,8 +16,8 @@ except IOError:
 # Adapted from http://flask.pocoo.org/docs/0.10/patterns/appdispatch/
 from werkzeug.exceptions import NotFound
 from subdomain_dispatcher import SubdomainDispatcher
-from test1 import app as test1_app
-from test2 import app as test2_app
+from test1.test1 import app as test1_app
+from test2.test1 import app as test2_app
 
 SUBDOMAIN_MAP = {
     "test1": test1_app,
