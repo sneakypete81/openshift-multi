@@ -36,6 +36,6 @@ def make_app(subdomain):
 from apps.camlib import camlib
 camlib.setup(os.environ.get('OPENSHIFT_DATA_DIR', 'apps/camlib/_json'))
 
-application = SubdomainDispatcher('peteburgers.tk', make_app)
+application = SubdomainDispatcher(os.environ.get('DOMAIN_ROOT', None), make_app)
 
 # No testing at this level - test from within the individual apps instead
