@@ -3,7 +3,7 @@ OpenShift Multi-App Environment
 
 This is an OpenShift Python WSGI application containing a number of apps.
 Requests are routed to each app based on the subdomain. For example:
-mobilator.peteburgers.tk is routed to the mobilator app.
+http://mobilator.peteburgers.tk is routed to the mobilator app.
 
 ### Apps
 
@@ -68,13 +68,15 @@ git remote set-url origin --push --add ssh://xxxxxx@multi-sneakypete81.rhcloud.c
 git push
 ```
 
-CamLib
-------
+App Details
+-----------
+
+### CamLib
 
 Scrapings from Cambridgeshire Library eBooks with ratings from GoodReads.
 https://github.com/sneakypete81/camlib
 
-### Configuration
+#### Configuration
 
 The hourly cron job needs to know where to find the scraper:
 ```
