@@ -19,11 +19,13 @@ from subdomain_dispatcher import SubdomainDispatcher
 from apps.test1.test1 import app as test1_app
 from apps.test2.test2 import app as test2_app
 from apps.camlib.camlib import app as camlib_app
+from apps.mobilator.mobilator import app as mobilator_app
 
 SUBDOMAIN_MAP = {
     "test1": test1_app,
     "test2": test2_app,
     "camlib": camlib_app,
+    "mobilator": mobilator_app
 }
 
 def make_app(subdomain):

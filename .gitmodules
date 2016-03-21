@@ -1,3 +1,6 @@
 [submodule "apps/camlib"]
 	path = apps/camlib
 	url = https://github.com/sneakypete81/camlib.git
+[submodule "apps/mobilator"]
+	path = apps/mobilator
+	url = https://github.com/sneakypete81/mobilator.git
