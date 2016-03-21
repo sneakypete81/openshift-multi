@@ -30,6 +30,6 @@ def make_app(subdomain):
     else:
         return NotFound
 
-application = SubdomainDispatcher('localhost', make_app)
+application = SubdomainDispatcher('peteburgers.tk', make_app)
 
 # No testing at this level - go into the individual apps instead
