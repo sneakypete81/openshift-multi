@@ -30,6 +30,7 @@ def make_app(subdomain):
     if subdomain in SUBDOMAIN_MAP:
         return SUBDOMAIN_MAP[subdomain]
     else:
+        print "ERROR: Unrecognised subdomain: %s" % subdomain
         return NotFound
 
 # Path setup for Camlib app
