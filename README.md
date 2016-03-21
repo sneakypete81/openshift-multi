@@ -59,6 +59,15 @@ everything (including updated submodules):
 git push --recurse-submodules=on-demand
 ```
 
+### Multiple Origins
+
+To push to both GitHub and OpenShift simultaneously, configure as follows:
+```
+git remote set-url origin --push --add git@github.com:sneakypete81/openshift-multi.git
+git remote set-url origin --push --add ssh://xxxxxx@multi-sneakypete81.rhcloud.com/~/git/multi.git/
+git push
+```
+
 CamLib
 ------
 
