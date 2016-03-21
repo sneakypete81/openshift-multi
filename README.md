@@ -19,10 +19,16 @@ rhc env set DOMAIN_ROOT=peteburgers.tk -a multi
 Each app is pulled in as a git submodule. Submodules are a bit tricky, so here's
 an example workflow:
 
-First pull in the latest versions of all submodules
+First pull in the latest versions of all submodules:
 ```
 # From the root repository:
 git submodule update --remote
+```
+
+Make sure the URL of each submodule is changed use SSH rather than HTTPS:
+```
+cd apps/camlib
+git remote set-url origin git@github.com:sneakypete81/camlib.git
 ```
 
 Now make sure we're working on the master branch of the submodule
