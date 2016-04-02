@@ -34,7 +34,12 @@ pip install -r app-root/repo/requirements.txt
 Each app is pulled in as a git submodule. Submodules are a bit tricky, so here's
 an example workflow:
 
-First pull in the latest versions of all submodules:
+First clone the repo and all submodules:
+```
+git clone git@github.com:sneakypete81/openshift-multi.git --recursive
+```
+
+To pull in the latest versions of all submodules:
 ```
 # From the root repository:
 git submodule update --remote
